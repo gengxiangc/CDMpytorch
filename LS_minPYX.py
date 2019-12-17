@@ -145,8 +145,8 @@ def train (Xs, Xt, Ys, Yt, sigma,
 
 if __name__ == '__main__':    
     
-    sigma    = 0.3
-    lbd_reg  = 1e-3
+    sigma    = 0.5
+    lbd_reg  = 1e-4
     lbd_inv  = 0.1
     lng_rate = 0.1
     max_iter = 100
@@ -162,7 +162,7 @@ if __name__ == '__main__':
         Ys = Ys[:, np.newaxis]
         
         Xt_ = np.linspace(-5, 2, 3)
-        Yt = 0.2*np.sin(Xt_) + 0.5
+        Yt = 0.6*np.sin(Xt_) + 0.5
         Yt = Yt[:, np.newaxis]
                   
         Xs = np.vstack((Xs_, Xs_)).T
